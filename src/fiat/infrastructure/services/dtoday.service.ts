@@ -1,20 +1,19 @@
 import { Injectable } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
+import { firstValueFrom } from 'rxjs';
 import { PriceServiceInterface } from 'src/fiat/domain/interfaces/priceService.interface';
 
 // dtoday url
-const url = 'https://api.dtoday.org/api/dtoday';
+const url = 'https://s3.amazonaws.com/dolartoday/data.json';
 
-Injectable();
+@Injectable()
 class DtodayService implements PriceServiceInterface {
-  constructor(private readonly httpService: HttpService) {}
+  constructor(private httpService: HttpService) {}
 
-  getPrice(): number {
-    /* return this.httpService
-          .get<Dtoday>(url)
-          .toPromise()
-          .then((res) => res.price); */
-    return 0.1;
+  async getPrice(): Promise<number> {
+    this.httpService.axiosRef.defaults.timeout = 4000;
+    const response = await firstValueFrom(this.httpService.get(url));
+    return response.data.USD.dolartoday || 0.0;
   }
 }
 

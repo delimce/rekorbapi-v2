@@ -4,7 +4,7 @@ import {
   priceService,
 } from 'src/fiat/domain/interfaces/priceService.interface';
 
-Injectable();
+@Injectable()
 export class DtodayUseCase {
   constructor(
     @Inject(priceService)

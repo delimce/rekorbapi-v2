@@ -1,7 +1,7 @@
 import { FiatPrice } from '../dto/fiatPrice';
 
 export interface PriceServiceInterface {
-  getPrice(): number;
+  getPrice(): Promise<number>;
   // getFiatPrice(): Promise<FiatPrice>;
 }
 
