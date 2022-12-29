@@ -12,7 +12,7 @@ const url = 'https://www.bcv.org.ve';
 class BcvService implements PriceServiceInterface {
   constructor(private httpService: HttpService) {}
   async getPrice(): Promise<number> {
-    // this.httpService.axiosRef.defaults.timeout = 3000;
+    this.httpService.axiosRef.defaults.timeout = 8000;
     this.httpService.axiosRef.defaults.httpsAgent = new Agent({
       rejectUnauthorized: false,
     });

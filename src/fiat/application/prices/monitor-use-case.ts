@@ -1,17 +1,17 @@
 import { Injectable, Inject } from '@nestjs/common';
 import {
   PriceServiceInterface,
-  priceService,
+  monitorPriceService,
 } from 'src/fiat/domain/interfaces/priceService.interface';
 
 @Injectable()
-export class DtodayUseCase {
+export class MonitorUseCase {
   constructor(
-    @Inject(priceService)
-    private dTodayService: PriceServiceInterface,
+    @Inject(monitorPriceService)
+    private monitorService: PriceServiceInterface,
   ) {}
 
   async getPrice(): Promise<number> {
-    return this.dTodayService.getPrice();
+    return this.monitorService.getPrice();
   }
 }
