@@ -6,3 +6,4 @@ export interface PriceServiceInterface {
 }
 
 export const priceService = Symbol('PriceServiceInterface');
+export const bcvPriceService = Symbol('BcvPriceServiceInterface');

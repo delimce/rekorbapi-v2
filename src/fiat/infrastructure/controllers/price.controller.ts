@@ -1,18 +1,21 @@
 import { Controller, Get } from '@nestjs/common';
-import { DtodayUseCase } from '../../application/prices';
+import { DtodayUseCase, BcvUseCase } from '../../application/prices';
 
 @Controller('fiat')
 export class PriceController {
-  constructor(private readonly dtodayUseCase: DtodayUseCase) {}
+  constructor(
+    private readonly dTodayUseCase: DtodayUseCase,
+    private readonly bcvUseCase: BcvUseCase,
+  ) {}
 
   @Get('bcv')
   getPriceBcv() {
-    return 'bcv';
+    return this.bcvUseCase.getPrice();
   }
 
   @Get('dtoday')
   getPriceDtoday() {
-    return this.dtodayUseCase.getPrice();
+    return this.dTodayUseCase.getPrice();
   }
 
   @Get('monitor')
