@@ -13,6 +13,7 @@ async function bootstrap() {
   );
 
   app.register(compression, { encodings: ['gzip', 'deflate'] });
+  app.enableCors();
   // await app.listen(3000); only localhost
   await app.listen(3000, '0.0.0.0');
 }
