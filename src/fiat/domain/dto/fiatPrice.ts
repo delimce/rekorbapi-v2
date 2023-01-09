@@ -7,5 +7,6 @@ export class FiatPrice implements FiatInterface {
     public price: number,
     public price_usd: number,
     public source: string,
+    public date: string,
   ) {}
 }
