@@ -5,12 +5,17 @@ import { PriceServiceInterface } from 'src/fiat/domain/interfaces/priceService.i
 import { HttpService } from '@nestjs/axios';
 import { Agent } from 'https';
 import { load } from 'cheerio';
+import { FiatPrice } from 'src/fiat/domain/dto/fiatPrice';
+import PriceServiceAbstract from './priceService.abstract';
 
 const url = 'https://www.bcv.org.ve';
 
 @Injectable()
-class BcvService implements PriceServiceInterface {
-  constructor(private httpService: HttpService) {}
+class BcvService extends PriceServiceAbstract implements PriceServiceInterface {
+  constructor(private httpService: HttpService) {
+    super();
+  }
+  code = 'BCV';
   async getPrice(): Promise<number> {
     this.httpService.axiosRef.defaults.timeout = 8000;
     this.httpService.axiosRef.defaults.httpsAgent = new Agent({

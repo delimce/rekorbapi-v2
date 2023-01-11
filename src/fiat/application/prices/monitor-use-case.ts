@@ -1,4 +1,5 @@
 import { Injectable, Inject } from '@nestjs/common';
+import { FiatPrice } from 'src/fiat/domain/dto/fiatPrice';
 import {
   PriceServiceInterface,
   monitorPriceService,
@@ -11,7 +12,7 @@ export class MonitorUseCase {
     private monitorService: PriceServiceInterface,
   ) {}
 
-  async getPrice(): Promise<number> {
-    return this.monitorService.getPrice();
+  async getPrice(): Promise<FiatPrice> {
+    return this.monitorService.getFiatPrice();
   }
 }

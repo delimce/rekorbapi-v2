@@ -1,4 +1,5 @@
 import { Injectable, Inject } from '@nestjs/common';
+import { FiatPrice } from 'src/fiat/domain/dto/fiatPrice';
 import {
   PriceServiceInterface,
   bcvPriceService,
@@ -11,7 +12,7 @@ export class BcvUseCase {
     private bcvService: PriceServiceInterface,
   ) {}
 
-  async getPrice(): Promise<number> {
-    return this.bcvService.getPrice();
+  async getPrice(): Promise<FiatPrice> {
+    return this.bcvService.getFiatPrice();
   }
 }

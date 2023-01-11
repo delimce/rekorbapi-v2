@@ -3,13 +3,20 @@ import { HttpService } from '@nestjs/axios';
 import { firstValueFrom } from 'rxjs';
 import { PriceServiceInterface } from 'src/fiat/domain/interfaces/priceService.interface';
 import { load } from 'cheerio';
+import PriceServiceAbstract from './priceService.abstract';
 
 // monitor url
 const url = 'https://monitordolarvenezuela.com/historial';
 
 @Injectable()
-class MonitorService implements PriceServiceInterface {
-  constructor(private httpService: HttpService) {}
+class MonitorService
+  extends PriceServiceAbstract
+  implements PriceServiceInterface
+{
+  constructor(private httpService: HttpService) {
+    super();
+  }
+  code = 'MONITOR';
 
   async getPrice(): Promise<number> {
     this.httpService.axiosRef.defaults.timeout = 3000;
