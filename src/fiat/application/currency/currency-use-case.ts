@@ -8,14 +8,14 @@ import {
 export class CurrencyUseCase {
   constructor(
     @Inject(currencyService)
-    private currencyService: CurrencyServiceInterface,
+    private currencyExchangeService: CurrencyServiceInterface,
   ) {}
 
   async getByCurrency(currency: string): Promise<any> {
-    return this.currencyService.getByCurrency(currency);
+    return this.currencyExchangeService.getByCurrency(currency);
   }
 
   async getAll(): Promise<any> {
-    return this.currencyService.getAll();
+    return this.currencyExchangeService.getAll();
   }
 }

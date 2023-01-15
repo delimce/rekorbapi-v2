@@ -17,7 +17,7 @@ class MonitorService
     super();
   }
   code = 'MONITOR';
-
+  currency = 'ves';
   async getPrice(): Promise<number> {
     this.httpService.axiosRef.defaults.timeout = 3000;
     const response = await firstValueFrom(this.httpService.get(url));

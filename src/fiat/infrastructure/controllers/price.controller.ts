@@ -3,6 +3,7 @@ import {
   MonitorUseCase,
   BcvUseCase,
   DtodayUseCase,
+  BlueUseCase,
 } from '../../application/prices';
 
 @Controller('fiat')
@@ -11,6 +12,7 @@ export class PriceController {
     private readonly dTodayUseCase: DtodayUseCase,
     private readonly bcvUseCase: BcvUseCase,
     private readonly monitorUseCase: MonitorUseCase,
+    private readonly blueUseCase: BlueUseCase,
   ) {}
 
   @Get('bcv')
@@ -26,5 +28,10 @@ export class PriceController {
   @Get('monitor')
   getPriceMonitor() {
     return this.monitorUseCase.getPrice();
+  }
+
+  @Get('blue')
+  getPriceBlue() {
+    return this.blueUseCase.getPrice();
   }
 }

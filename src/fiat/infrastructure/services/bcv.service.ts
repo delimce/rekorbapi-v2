@@ -15,6 +15,7 @@ class BcvService extends PriceServiceAbstract implements PriceServiceInterface {
     super();
   }
   code = 'BCV';
+  currency = 'ves';
   async getPrice(): Promise<number> {
     this.httpService.axiosRef.defaults.timeout = 8000;
     this.httpService.axiosRef.defaults.httpsAgent = new Agent({
