@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node-mongo
 {
-	"name": "Node.js & Mongo DB",
+	"name": "rekorbapi-v2",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
@@ -14,11 +14,12 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"mongodb.mongodb-vscode",
+				"dbaeumer.vscode-eslint",
+				"firsttris.vscode-jest-runner",
 				"donjayamanne.githistory",
 				"eamodio.gitlens",
-				"hbenl.vscode-test-explorer",
-				"ms-vscode.test-adapter-converter",
-				"dbaeumer.vscode-eslint"
+				"streetsidesoftware.code-spell-checker",
+				"github.copilot"
 			]
 		}
 	},
