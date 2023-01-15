@@ -28,7 +28,7 @@ class FloatRatesService implements CurrencyServiceInterface {
     const founded =
       response.data[currency.toLocaleLowerCase()] === undefined
         ? null
-        : response.data[currency.toLocaleLowerCase()];
+        : this.toFiatPrice(response.data[currency.toLocaleLowerCase()]);
     return founded;
   }
   async getAll(): Promise<FiatPrice[]> {

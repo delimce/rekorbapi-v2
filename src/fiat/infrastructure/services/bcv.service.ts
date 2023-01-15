@@ -5,7 +5,6 @@ import { PriceServiceInterface } from 'src/fiat/domain/interfaces/priceService.i
 import { HttpService } from '@nestjs/axios';
 import { Agent } from 'https';
 import { load } from 'cheerio';
-import { FiatPrice } from 'src/fiat/domain/dto/fiatPrice';
 import PriceServiceAbstract from './priceService.abstract';
 
 const url = 'https://www.bcv.org.ve';
