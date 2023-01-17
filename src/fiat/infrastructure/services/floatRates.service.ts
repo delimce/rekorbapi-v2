@@ -1,8 +1,7 @@
-import { FiatPrice } from 'src/fiat/domain/dto/fiatPrice';
 import { CurrencyServiceInterface } from 'src/fiat/domain/interfaces/currencyService.interface';
-
-import { Injectable } from '@nestjs/common';
+import { FiatPrice } from 'src/fiat/domain/dto/fiatPrice';
 import { HttpService } from '@nestjs/axios';
+import { Injectable } from '@nestjs/common';
 import { firstValueFrom } from 'rxjs';
 
 // floatRates url

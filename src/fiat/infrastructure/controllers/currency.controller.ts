@@ -1,6 +1,6 @@
-import { Controller, Get, Param } from '@nestjs/common';
-import { LengthPipe } from 'src/fiat/infrastructure/pipes/length.pipe';
 import { CurrencyUseCase } from 'src/fiat/application/currency/currency-use-case';
+import { LengthPipe } from 'src/fiat/infrastructure/pipes/length.pipe';
+import { Controller, Get, Param } from '@nestjs/common';
 
 @Controller('fiat')
 export class CurrencyController {

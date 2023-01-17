@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
 
-import { firstValueFrom } from 'rxjs';
 import { PriceServiceInterface } from 'src/fiat/domain/interfaces/priceService.interface';
-import { HttpService } from '@nestjs/axios';
-import { Agent } from 'https';
-import { load } from 'cheerio';
 import PriceServiceAbstract from './priceService.abstract';
+import { HttpService } from '@nestjs/axios';
+import { firstValueFrom } from 'rxjs';
+import { load } from 'cheerio';
+import { Agent } from 'https';
 
 const url = 'https://www.bcv.org.ve';
 

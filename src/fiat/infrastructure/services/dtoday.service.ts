@@ -1,8 +1,8 @@
-import { Injectable } from '@nestjs/common';
-import { HttpService } from '@nestjs/axios';
-import { firstValueFrom } from 'rxjs';
 import { PriceServiceInterface } from 'src/fiat/domain/interfaces/priceService.interface';
 import PriceServiceAbstract from './priceService.abstract';
+import { HttpService } from '@nestjs/axios';
+import { Injectable } from '@nestjs/common';
+import { firstValueFrom } from 'rxjs';
 
 // dtoday url
 const url = 'https://s3.amazonaws.com/dolartoday/data.json';

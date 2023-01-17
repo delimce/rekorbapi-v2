@@ -12,15 +12,15 @@ import {
   monitorPriceService,
   bluePriceService,
 } from './domain/interfaces/priceService.interface';
+import { CurrencyController } from './infrastructure/controllers/currency.controller';
 import { currencyService } from './domain/interfaces/currencyService.interface';
 import { PriceController } from './infrastructure/controllers/price.controller';
-import BcvService from './infrastructure/services/bcv.service';
-import DtodayService from './infrastructure/services/dtoday.service';
-import MonitorService from './infrastructure/services/monitor.service';
-import BlueService from './infrastructure/services/blue.service';
 import FloatRatesService from './infrastructure/services/floatRates.service';
 import { CurrencyUseCase } from './application/currency/currency-use-case';
-import { CurrencyController } from './infrastructure/controllers/currency.controller';
+import MonitorService from './infrastructure/services/monitor.service';
+import DtodayService from './infrastructure/services/dtoday.service';
+import BlueService from './infrastructure/services/blue.service';
+import BcvService from './infrastructure/services/bcv.service';
 
 @Module({
   imports: [
@@ -35,16 +35,16 @@ import { CurrencyController } from './infrastructure/controllers/currency.contro
   ],
   controllers: [PriceController, CurrencyController],
   providers: [
-    { provide: priceService, useClass: DtodayService },
     { provide: monitorPriceService, useClass: MonitorService },
-    { provide: bcvPriceService, useClass: BcvService },
-    { provide: bluePriceService, useClass: BlueService },
     { provide: currencyService, useClass: FloatRatesService },
-    DtodayUseCase,
-    BcvUseCase,
-    MonitorUseCase,
+    { provide: bluePriceService, useClass: BlueService },
+    { provide: priceService, useClass: DtodayService },
+    { provide: bcvPriceService, useClass: BcvService },
     CurrencyUseCase,
+    MonitorUseCase,
+    DtodayUseCase,
     BlueUseCase,
+    BcvUseCase,
   ],
 })
 export class FiatModule {}

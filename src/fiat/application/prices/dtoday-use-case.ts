@@ -1,5 +1,5 @@
-import { Injectable, Inject } from '@nestjs/common';
 import { FiatPrice } from 'src/fiat/domain/dto/fiatPrice';
+import { Injectable, Inject } from '@nestjs/common';
 import {
   PriceServiceInterface,
   priceService,

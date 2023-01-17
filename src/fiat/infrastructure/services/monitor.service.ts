@@ -1,9 +1,9 @@
+import { PriceServiceInterface } from 'src/fiat/domain/interfaces/priceService.interface';
+import PriceServiceAbstract from './priceService.abstract';
 import { Injectable } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 import { firstValueFrom } from 'rxjs';
-import { PriceServiceInterface } from 'src/fiat/domain/interfaces/priceService.interface';
 import { load } from 'cheerio';
-import PriceServiceAbstract from './priceService.abstract';
 
 // monitor url
 const url = 'https://monitordolarvenezuela.com/historial';
