@@ -1,4 +1,5 @@
 import { Controller, Get, Param } from '@nestjs/common';
+import { LengthPipe } from 'src/fiat/infrastructure/pipes/length.pipe';
 import { CurrencyUseCase } from 'src/fiat/application/currency/currency-use-case';
 
 @Controller('fiat')
@@ -11,7 +12,7 @@ export class CurrencyController {
   }
 
   @Get('currency/:code')
-  getByCurrency(@Param('code') currency: string) {
+  getByCurrency(@Param('code', new LengthPipe()) currency: string) {
     return this.currencyUseCase.getByCurrency(currency);
   }
 }
