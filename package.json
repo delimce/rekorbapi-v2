@@ -28,6 +28,7 @@
     "@nestjs/platform-express": "^9.0.0",
     "@nestjs/platform-fastify": "^9.2.1",
     "cheerio": "^1.0.0-rc.12",
+    "coingecko-api-v3": "^0.0.20",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0"
