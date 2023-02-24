@@ -1,4 +1,5 @@
 import { Injectable, Inject } from '@nestjs/common';
+import CryptoInterface from 'src/crypto/domain/interfaces/crypto.interface';
 import {
   CryptoServiceInterface,
   geckoCryptoService,
@@ -13,5 +14,9 @@ export class GeckoUserCase {
 
   async ping(): Promise<boolean> {
     return this.cryptoService.ping();
+  }
+
+  async getCryptoList(): Promise<CryptoInterface[]> {
+    return this.cryptoService.getCryptoList();
   }
 }

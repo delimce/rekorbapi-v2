@@ -2,6 +2,8 @@ import CryptoInterface from 'src/crypto/domain/interfaces/crypto.interface';
 import { CryptoServiceInterface } from 'src/crypto/domain/interfaces/cryptoService.interface';
 import { Injectable } from '@nestjs/common';
 import { CoinGeckoClient } from 'coingecko-api-v3';
+import { CryptoCoin } from 'src/crypto/domain/dto/cryptoCoin';
+import { geckoValues } from 'src/crypto/domain/valueObjects/gecko.values';
 
 @Injectable()
 class GeckoService implements CryptoServiceInterface {
@@ -19,7 +21,19 @@ class GeckoService implements CryptoServiceInterface {
   }
 
   async getCryptoList(): Promise<CryptoInterface[]> {
-    throw new Error('Method not implemented.');
+    const list = await this.client.coinMarket(geckoValues);
+    return await list.map((coin) => {
+      return new CryptoCoin(
+        coin.id,
+        coin.name,
+        coin.symbol,
+        coin.current_price,
+        'gecko',
+        coin.market_cap_rank,
+        coin.total_supply,
+        coin.circulating_supply,
+      );
+    });
   }
   async getCryptoById(id: string): Promise<CryptoInterface | null> {
     throw new Error('Method not implemented.');

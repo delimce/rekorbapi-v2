@@ -8,4 +8,9 @@ export class GeckoController {
   ping() {
     return this.geckoUseCase.ping();
   }
+
+  @Get('list')
+  async list() {
+    return this.geckoUseCase.getCryptoList();
+  }
 }
