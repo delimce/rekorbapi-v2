@@ -19,4 +19,8 @@ export class GeckoUserCase {
   async getCryptoList(): Promise<CryptoInterface[]> {
     return this.cryptoService.getCryptoList();
   }
+
+  async getCryptoById(id: string): Promise<CryptoInterface | null> {
+    return this.cryptoService.getCryptoById(id);
+  }
 }

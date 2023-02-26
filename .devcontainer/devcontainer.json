@@ -19,7 +19,8 @@
 				"donjayamanne.githistory",
 				"eamodio.gitlens",
 				"streetsidesoftware.code-spell-checker",
-				"github.copilot"
+				"github.copilot",
+				"kakumei.ts-debug"
 			]
 		}
 	},
