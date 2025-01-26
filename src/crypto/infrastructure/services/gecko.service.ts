@@ -1,4 +1,4 @@
-import CryptoInterface from 'src/crypto/domain/interfaces/crypto.interface';
+import CryptoType from 'src/crypto/domain/types/crypto.type';
 import { CryptoServiceInterface } from 'src/crypto/domain/interfaces/cryptoService.interface';
 import { Injectable } from '@nestjs/common';
 import { CoinGeckoClient } from 'coingecko-api-v3';
@@ -24,7 +24,7 @@ class GeckoService implements CryptoServiceInterface {
     return ping.gecko_says === '(V3) To the Moon!';
   }
 
-  async getCryptoList(): Promise<CryptoInterface[]> {
+  async getCryptoList(): Promise<CryptoType[]> {
     const list = await this.client.coinMarket(geckoMarketsConfig);
     return await list.map((coin) => {
       return new CryptoCoin(
@@ -39,7 +39,7 @@ class GeckoService implements CryptoServiceInterface {
       );
     });
   }
-  async getCryptoById(id: string): Promise<CryptoInterface | null> {
+  async getCryptoById(id: string): Promise<CryptoType | null> {
     this.setCoinIntoConfig(id);
     try {
       const details = await this.client.coinId(geckoGetCoinConfig);

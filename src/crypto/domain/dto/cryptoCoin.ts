@@ -1,6 +1,6 @@
-import CryptoInterface from '../interfaces/crypto.interface';
+import CryptoType from '../types/crypto.type';
 
-export class CryptoCoin implements CryptoInterface {
+export class CryptoCoin implements CryptoType {
   constructor(
     public id: string,
     public symbol: string,
@@ -10,5 +10,5 @@ export class CryptoCoin implements CryptoInterface {
     public rank?: number,
     public total_supply?: number,
     public circulating_supply?: number,
-  ) {}
+  ) { }
 }
