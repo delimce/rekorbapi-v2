@@ -7,5 +7,5 @@ export class FiatPrice implements FiatType {
     public price_usd: number,
     public source: string,
     public date: string,
-  ) { }
+  ) {}
 }

@@ -10,5 +10,5 @@ export class CryptoCoin implements CryptoType {
     public rank?: number,
     public total_supply?: number,
     public circulating_supply?: number,
-  ) { }
+  ) {}
 }

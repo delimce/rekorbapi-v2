@@ -5,7 +5,7 @@ export class PriceController {
   constructor(
     private readonly bcvUseCase: BcvUseCase,
     private readonly blueUseCase: BlueUseCase,
-  ) { }
+  ) {}
 
   @Get('bcv')
   getPriceBcv() {

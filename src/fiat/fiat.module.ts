@@ -34,4 +34,4 @@ import BcvService from './infrastructure/services/bcv.service';
     BcvUseCase,
   ],
 })
-export class FiatModule { }
+export class FiatModule {}

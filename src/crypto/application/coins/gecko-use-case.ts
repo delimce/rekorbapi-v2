@@ -10,7 +10,7 @@ export class GeckoUserCase {
   constructor(
     @Inject(geckoCryptoService)
     private cryptoService: CryptoServiceInterface,
-  ) { }
+  ) {}
 
   async ping(): Promise<boolean> {
     return this.cryptoService.ping();
