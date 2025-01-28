@@ -1,5 +1,5 @@
-import { CurrencyServiceInterface } from 'src/fiat/domain/interfaces/currencyService.interface';
-import { FiatPrice } from 'src/fiat/domain/dto/fiatPrice';
+import { CurrencyServiceInterface } from '@Fiat/domain/interfaces/currencyService.interface';
+import { FiatPrice } from '@Fiat/domain/dto/fiatPrice';
 import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';
 import { firstValueFrom } from 'rxjs';

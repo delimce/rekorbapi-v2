@@ -1,7 +1,7 @@
 import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';
 import { firstValueFrom } from 'rxjs';
-import { PriceServiceInterface } from 'src/fiat/domain/interfaces/priceService.interface';
+import { PriceServiceInterface } from '@Fiat/domain/interfaces/priceService.interface';
 import PriceServiceAbstract from './priceService.abstract';
 
 const url = 'https://api.bluelytics.com.ar/v2/latest';

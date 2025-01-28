@@ -1,4 +1,4 @@
-import { FiatPrice } from 'src/fiat/domain/dto/fiatPrice';
+import { FiatPrice } from '@Fiat/domain/dto/fiatPrice';
 
 abstract class PriceServiceAbstract {
   abstract code: string;

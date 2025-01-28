@@ -1,4 +1,4 @@
-import CryptoType from '../types/crypto.type';
+import CryptoType from '@Crypto/domain/types/crypto.type';
 
 export interface CryptoServiceInterface {
   ping(): Promise<boolean>; // ping service

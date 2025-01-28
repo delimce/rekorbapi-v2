@@ -1,5 +1,5 @@
-import CryptoType from 'src/crypto/domain/types/crypto.type';
-import { CryptoServiceInterface } from 'src/crypto/domain/interfaces/cryptoService.interface';
+import CryptoType from '@Crypto/domain/types/crypto.type';
+import { CryptoServiceInterface } from '@Crypto/domain/interfaces/cryptoService.interface';
 import { Injectable } from '@nestjs/common';
 import { CoinGeckoClient } from 'coingecko-api-v3';
 import { CryptoCoin } from 'src/crypto/domain/dto/cryptoCoin';

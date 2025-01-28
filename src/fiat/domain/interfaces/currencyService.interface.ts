@@ -1,4 +1,4 @@
-import { FiatPrice } from '../dto/fiatPrice';
+import { FiatPrice } from '@Fiat/domain/dto/fiatPrice';
 
 /**
  * this interface is used to get the price of a currency on USD base price

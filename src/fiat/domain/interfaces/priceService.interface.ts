@@ -1,4 +1,4 @@
-import { FiatPrice } from '../dto/fiatPrice';
+import { FiatPrice } from '@Fiat/domain/dto/fiatPrice';
 
 export interface PriceServiceInterface {
   getPrice(): Promise<number>;

@@ -1,4 +1,4 @@
-import FiatType from '../types/fiat.type';
+import FiatType from '@Fiat/domain/types/fiat.type';
 export class FiatPrice implements FiatType {
   constructor(
     public code: string,

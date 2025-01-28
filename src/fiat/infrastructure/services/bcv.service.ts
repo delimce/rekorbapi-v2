@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 
-import { PriceServiceInterface } from 'src/fiat/domain/interfaces/priceService.interface';
+import { PriceServiceInterface } from '@Fiat/domain/interfaces/priceService.interface';
 import PriceServiceAbstract from './priceService.abstract';
 import { HttpService } from '@nestjs/axios';
 import { firstValueFrom } from 'rxjs';

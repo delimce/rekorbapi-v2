@@ -1,4 +1,4 @@
-import CryptoType from '../types/crypto.type';
+import CryptoType from '@Crypto/domain/types/crypto.type';
 
 export class CryptoCoin implements CryptoType {
   constructor(

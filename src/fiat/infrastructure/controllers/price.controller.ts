@@ -1,5 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
-import { BcvUseCase, BlueUseCase } from '../../application/prices';
+import { BcvUseCase, BlueUseCase } from '@Fiat/application/prices';
 @Controller('fiat')
 export class PriceController {
   constructor(

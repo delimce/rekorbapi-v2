@@ -1,5 +1,5 @@
-import { CurrencyUseCase } from 'src/fiat/application/currency/currency-use-case';
-import { LengthPipe } from 'src/fiat/infrastructure/pipes/length.pipe';
+import { CurrencyUseCase } from '@Fiat/application/currency/currency-use-case';
+import { LengthPipe } from '@Fiat/infrastructure/pipes/length.pipe';
 import { Controller, Get, Param } from '@nestjs/common';
 
 @Controller('fiat')
