@@ -5,7 +5,6 @@ export interface PriceServiceInterface {
   getFiatPrice(): Promise<FiatPrice>;
 }
 
-export const monitorPriceService = Symbol('MonitorPriceServiceInterface');
 export const bluePriceService = Symbol('BluePriceServiceInterface');
 export const bcvPriceService = Symbol('BcvPriceServiceInterface');
 export const priceService = Symbol('PriceServiceInterface');
