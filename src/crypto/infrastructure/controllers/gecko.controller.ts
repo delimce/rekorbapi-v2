@@ -5,7 +5,7 @@ import {
   HttpStatus,
   Param,
 } from '@nestjs/common';
-import { GeckoUserCase } from 'src/crypto/application/coins';
+import { GeckoUserCase } from '@Crypto/application/coins';
 
 @Controller('crypto/gecko')
 export class GeckoController {

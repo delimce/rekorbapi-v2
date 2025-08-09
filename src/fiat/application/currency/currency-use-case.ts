@@ -2,7 +2,7 @@ import { Injectable, Inject } from '@nestjs/common';
 import {
   currencyService,
   CurrencyServiceInterface,
-} from 'src/fiat/domain/interfaces/currencyService.interface';
+} from '@Fiat/domain/interfaces/currencyService.interface';
 
 @Injectable()
 export class CurrencyUseCase {

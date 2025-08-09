@@ -1,9 +1,9 @@
 import { Injectable, Inject } from '@nestjs/common';
-import CryptoType from 'src/crypto/domain/types/crypto.type';
+import CryptoType from '@Crypto/domain/types/crypto.type';
 import {
   CryptoServiceInterface,
   geckoCryptoService,
-} from 'src/crypto/domain/interfaces/cryptoService.interface';
+} from '@Crypto/domain/interfaces/cryptoService.interface';
 
 @Injectable()
 export class GeckoUserCase {

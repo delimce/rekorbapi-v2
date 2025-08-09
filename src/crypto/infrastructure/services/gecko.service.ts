@@ -2,12 +2,12 @@ import CryptoType from '@Crypto/domain/types/crypto.type';
 import { CryptoServiceInterface } from '@Crypto/domain/interfaces/cryptoService.interface';
 import { Injectable } from '@nestjs/common';
 import { CoinGeckoClient } from 'coingecko-api-v3';
-import { CryptoCoin } from 'src/crypto/domain/dto/cryptoCoin';
+import { CryptoCoin } from '@Crypto/domain/dto/cryptoCoin';
 import {
   GeckoGetCoinConfig,
   geckoGetCoinConfig,
   geckoMarketsConfig,
-} from 'src/crypto/domain/valueObjects/gecko.values';
+} from '@Crypto/domain/valueObjects/gecko.values';
 
 @Injectable()
 class GeckoService implements CryptoServiceInterface {
