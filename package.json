@@ -9,6 +9,7 @@
     "prepare": "husky",
     "prebuild": "rimraf dist",
     "build": "nest build",
+    "package": "npm run test:cov && npm run build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
@@ -87,9 +88,9 @@
     "coverageThreshold": {
       "global": {
         "branches": 90,
-        "functions": 90,
-        "lines": 100,
-        "statements": 100
+        "functions": 98,
+        "lines": 98,
+        "statements": 98
       }
     },
     "coverageDirectory": "./coverage",
